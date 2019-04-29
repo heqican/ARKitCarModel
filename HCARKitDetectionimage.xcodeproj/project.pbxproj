@@ -544,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bjlc.luckycoffee;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-xxx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = luckycoffee_development;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -564,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bjlc.luckycoffee;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-xxx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = luckycoffee_development;
 				TARGETED_DEVICE_FAMILY = "1,2";
