@@ -32,7 +32,9 @@
 }
 
 - (void)tableViewDataList{
-    self.dataArray = [NSMutableArray arrayWithObjects:@"拆卸轮胎",@"转动轮胎",@"汽车旋转",@"后视镜",@"升降车窗", nil];
+//    self.dataArray = [NSMutableArray arrayWithObjects:@"拆卸轮胎",@"转动轮胎",@"汽车旋转",@"后视镜",@"升降车窗", nil];
+    //new
+    self.dataArray = [NSMutableArray arrayWithObjects:@"后视镜开关",@"启停开关",@"旋转开关",@"车窗开关", nil];
 }
 
 - (void)createSubviews{
@@ -102,24 +104,25 @@
     
     //init cell
     switch (indexPath.row) {
-        case 0:{//拆卸轮胎
-            [cell initCellWithTitle:title active:self.tireSpared indexPath:indexPath];
+        case 0:{//后视镜开关
+            [cell initCellWithTitle:title active:self.rearviewMirrorClosed indexPath:indexPath];
+            
             break;
         }
-        case 1:{//轮胎转动
+        case 1:{//启停开关
             [cell initCellWithTitle:title active:self.tireTurned indexPath:indexPath];
             break;
         }
-        case 2:{//汽车旋转（自转）
+        case 2:{//旋转开关（自转）
             [cell initCellWithTitle:title active:self.carTurned indexPath:indexPath];
             break;
         }
-        case 3:{//后视镜
-            [cell initCellWithTitle:title active:self.rearviewMirrorClosed indexPath:indexPath];
+        case 3:{//升降车窗
+            [cell initCellWithTitle:title active:self.windowsDown indexPath:indexPath];
             break;
         }
-        case 4:{//升降车窗
-            [cell initCellWithTitle:title active:self.windowsDown indexPath:indexPath];
+        case 4:{//
+            
             break;
         }
             
@@ -132,38 +135,39 @@
     //按钮切换回调
     cell.switchBlock = ^(NSInteger index, BOOL active) {
         switch (index) {
-            case 0:{//拆卸轮胎回调
-                if (self.tireSparedBlock) {
-                    self.tireSparedBlock(active);
+            case 0:{//后视镜开关
+                if (self.rearviewMirrorBlock) {
+                    self.rearviewMirrorClosed = active;
+                    self.rearviewMirrorBlock(active);
                 }
+               
                 break;
             }
-            case 1:{//轮胎转动回调
+            case 1:{//启停开关
                 if (self.tireTurnBlock) {
                     self.tireTurned = active;
                     self.tireTurnBlock(active);
                 }
                 break;
             }
-            case 2:{//汽车旋转（自转）
+            case 2:{//旋转开关（自转）
                 if (self.carTurnBlock) {
                     self.carTurned = active;
                     self.carTurnBlock(active);
                 }
                 break;
             }
-            case 3:{//合上后视镜
-                if (self.rearviewMirrorBlock) {
-                    self.rearviewMirrorClosed = active;
-                    self.rearviewMirrorBlock(active);
-                }
-                break;
-            }
-            case 4:{//升降车窗
+            case 3:{//升降车窗
                 if (self.windowsBlock) {
                     self.windowsDown = active;
                     self.windowsBlock(active);
                 }
+                break;
+            }
+            case 4:{//拆卸轮胎
+//                if (self.tireSparedBlock) {
+//                    self.tireSparedBlock(active);
+//                }
                 break;
             }
                 
@@ -202,6 +206,7 @@
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
         _tableView.backgroundColor = [UIColor clearColor];
+        _tableView.separatorColor = [UIColor clearColor];
     }
     return _tableView;
 }

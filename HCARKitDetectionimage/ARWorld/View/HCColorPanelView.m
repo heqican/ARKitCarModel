@@ -7,6 +7,7 @@
 //
 
 #import "HCColorPanelView.h"
+#import "Const.h"
 
 @interface HCColorPanelView ()
 @property (nonatomic, strong) NSMutableArray *colorArray;
@@ -50,13 +51,19 @@
     }
 }
 
+/*
+ 868B95FF
+ 2F2F2FFF
+ FFFFFFFF
+ 2756EBFF
+ */
 - (NSMutableArray *)colorArray{
     if (!_colorArray) {
         _colorArray = [NSMutableArray arrayWithObjects:
-                       [UIColor redColor],
-                       [UIColor blueColor],
-                       [UIColor blackColor],
-                       [UIColor purpleColor],
+                       UIColorFromRGB(0x868B95),
+                       UIColorFromRGB(0x2F2F2F),
+                       UIColorFromRGB(0xFFFFFF),
+                       UIColorFromRGB(0x2756EB),
                        nil];
     }
     return _colorArray;

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define tableView_cell_height 50.f
+#define tableView_cell_height 70.f
 
 typedef void(^ClickSwitchControlBlock)(NSInteger index, BOOL active);
 

@@ -41,6 +41,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)onARWorldCarWithType:(ARWorldTrackingConfigurationType)type ParamVC:(UIViewController *)paranVC animated:(BOOL)animated;
 
+
+/**
+ 进入AR世界 - SCNAction动画
+
+ @param type <#type description#>
+ @param paranVC <#paranVC description#>
+ @param animated <#animated description#>
+ */
+- (void)onARWorldAnimationActionWithType:(ARWorldTrackingConfigurationType)type paranVC:(UIViewController *)paranVC animated:(BOOL)animated;
+
 @end
 
 NS_ASSUME_NONNULL_END

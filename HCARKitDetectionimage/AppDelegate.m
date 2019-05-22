@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Home/HCHomeViewController.h"
+#import "HCARCarViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    HCHomeViewController *homeVC = [[HCHomeViewController alloc] init];
+    HCARCarViewController *homeVC = [[HCARCarViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:homeVC];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];

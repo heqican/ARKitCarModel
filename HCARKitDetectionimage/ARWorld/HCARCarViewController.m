@@ -15,10 +15,9 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 
 
 @interface HCARCarViewController ()<ARSCNViewDelegate,ARSessionDelegate>
-@property (nonatomic, strong) UIButton *backButton;//返回按钮
-@property (nonatomic, strong) ARSCNView *sceneView;
+@property (nonatomic, strong) ARSCNView *sceneView;//AR视图（AR场景填在在其上）
 @property (nonatomic, strong) ARWorldTrackingConfiguration *configuration;//AR世界追踪
-@property (nonatomic, strong) SCNScene *scene;
+@property (nonatomic, strong) SCNScene *scene;//AR场景
 
 @property (nonatomic, strong) ARPlaneAnchor *planAnchor;//平面锚点
 @property (nonatomic, strong) SCNNode *planParanNode;//地面节点(模型放上面)
@@ -34,6 +33,9 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 //菜单面板
 @property (nonatomic, strong) UIButton *menuButton;
 @property (nonatomic, strong) HCMenuPanelView *menuPanelView;
+@property (nonatomic, strong) UIImageView *topNameImageView;
+@property (nonatomic, strong) UIButton *lightButton;//开车灯按钮
+
 
 @end
 
@@ -55,16 +57,21 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"汽车世界";
+//    self.title = @"汽车世界";
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.arType = ARWorldTrackingConfigurationType_planeDetection_CarDemo;
+    
     self.modelShowing = NO;
     self.isSeachPlan = NO;
     self.colorPanelView.hidden = YES;
     self.menuButton.hidden = YES;
+    self.topNameImageView.hidden = YES;
+    self.lightButton.hidden = YES;
 
     self.tireSpared = NO;
     self.menuPanelView.tireSpared = NO;
@@ -82,9 +89,10 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 }
 
 - (void)initPageUI{
-    [self.sceneView addSubview:self.backButton];
     [self.sceneView addSubview:self.colorPanelView];
     [self.sceneView addSubview:self.menuButton];
+    [self.sceneView addSubview:self.topNameImageView];
+    [self.sceneView addSubview:self.lightButton];
     [self.sceneView addSubview:self.menuPanelView];
 }
 
@@ -423,6 +431,7 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 
 
 #pragma mark - 点击
+
 - (void)doBak:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -432,7 +441,13 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
     [self.menuPanelView show];
 }
 
-#pragma mark - 放置汽车模型
+//点击车灯按钮
+- (void)clickLightButton:(UIButton *)sender{
+    sender.selected = !sender.selected;
+    
+}
+
+#pragma mark - 显示汽车模型
 //放置汽车模型  放在self.planParanNode上
 - (void)showCarModel:(id)sender{
     if (!self.isSeachPlan) {
@@ -461,6 +476,8 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
     self.modelShowing = YES;
     self.colorPanelView.hidden = NO;
     self.menuButton.hidden = NO;
+    self.topNameImageView.hidden = NO;
+    self.lightButton.hidden = NO;
 }
 
 //点击检测（碰撞检测）
@@ -515,6 +532,7 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 }
 
 #pragma mark - 模型的拖拽、旋转、缩放
+
 //给场景视图添加手势
 - (void)addRecognizerToSceneView{
     UIPanGestureRecognizer *panGes = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panView:)];
@@ -591,8 +609,10 @@ CGFloat oldModelScale = Car_Model_Scale;
     }
 }
 
+
 #pragma mark - lazy load
-- (SCNView *)sceneView{
+
+- (ARSCNView *)sceneView{
     if (!_sceneView) {
         _sceneView = [[ARSCNView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
         _sceneView.delegate = self;
@@ -623,15 +643,6 @@ CGFloat oldModelScale = Car_Model_Scale;
     return _planParanNode;
 }
 
-- (UIButton *)backButton{
-    if (!_backButton) {
-        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _backButton.frame = CGRectMake(10, 20, 44, 44);
-        [_backButton setImage:[UIImage imageNamed:@"image_back"] forState:UIControlStateNormal];
-        [_backButton addTarget:self action:@selector(doBak:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return _backButton;
-}
 
 - (HCColorPanelView *)colorPanelView{
     if (!_colorPanelView) {
@@ -642,6 +653,8 @@ CGFloat oldModelScale = Car_Model_Scale;
             //修改汽车颜色
             SCNNode *bodyNode = [weakSelf.carModelNode childNodeWithName:@"body_01" recursively:YES];
             bodyNode.childNodes[0].geometry.firstMaterial.diffuse.contents = color;
+            
+            [weakSelf.menuPanelView hidden];
         };
     }
     return _colorPanelView;
@@ -656,6 +669,28 @@ CGFloat oldModelScale = Car_Model_Scale;
         _menuButton.hidden = YES;
     }
     return _menuButton;
+}
+
+- (UIImageView *)topNameImageView{
+    if (!_topNameImageView) {
+        _topNameImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 15, 131, 40)];
+        [_topNameImageView setImage:[UIImage imageNamed:@"car_topName_image"]];
+        _topNameImageView.center = CGPointMake(iphone_width/2, _topNameImageView.center.y);
+        _topNameImageView.hidden = YES;
+    }
+    return _topNameImageView;
+}
+
+- (UIButton *)lightButton{
+    if (!_lightButton) {
+        _lightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _lightButton.frame = CGRectMake(16, 15, 44, 44);
+        [_lightButton setImage:[UIImage imageNamed:@"car_light_button_image_normal"] forState:UIControlStateNormal];
+        [_lightButton setImage:[UIImage imageNamed:@"car_light_button_image_selected"] forState:UIControlStateSelected];
+        [_lightButton addTarget:self action:@selector(clickLightButton:) forControlEvents:UIControlEventTouchUpInside];
+        _lightButton.hidden = YES;
+    }
+    return _lightButton;
 }
 
 - (HCMenuPanelView *)menuPanelView{

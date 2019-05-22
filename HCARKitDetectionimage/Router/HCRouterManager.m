@@ -10,6 +10,7 @@
 #import "HCHomeViewController.h"
 #import "HCARWorldViewController.h"
 #import "HCARCarViewController.h"
+#import "HCARAnimationActionViewController.h"
 
 @interface HCRouterManager ()
 
@@ -40,6 +41,15 @@ static HCRouterManager *_shareInstance = nil;
     if ([arVC isKindOfClass:[UIViewController class]]) {
         arVC.arType = type;//AR世界追踪为模式
 //        [paranVC.navigationController pushViewController:arVC animated:animated];
+        [paranVC presentViewController:arVC animated:YES completion:nil];
+    }
+}
+
+//进入AR世界 - SCNAction动画
+- (void)onARWorldAnimationActionWithType:(ARWorldTrackingConfigurationType)type paranVC:(UIViewController *)paranVC animated:(BOOL)animated{
+    HCARAnimationActionViewController *arVC = [[HCARAnimationActionViewController alloc] init];
+    if ([arVC isKindOfClass:[UIViewController class]]) {
+        arVC.arType = type;//AR世界追踪为模式
         [paranVC presentViewController:arVC animated:YES completion:nil];
     }
 }

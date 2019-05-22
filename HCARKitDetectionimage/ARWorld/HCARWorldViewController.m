@@ -273,7 +273,7 @@
 
 
 #pragma mark - lazy load
-- (SCNView *)sceneView{
+- (ARSCNView *)sceneView{
     if (!_sceneView) {
         _sceneView = [[ARSCNView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
         _sceneView.delegate = self;
@@ -351,6 +351,7 @@
 - (SCNNode *)faceTextureMaskNode {
     if (!_faceTextureMaskNode) {
         id<MTLDevice> device = self.sceneView.device;
+//        id<MTLDevice> device = _sceneView.device;
         ARSCNFaceGeometry *geometry = [ARSCNFaceGeometry faceGeometryWithDevice:device fillMesh:NO];
         SCNMaterial *material = geometry.firstMaterial;
         material.fillMode = SCNFillModeFill;
@@ -359,6 +360,7 @@
     }
     _faceTextureMaskNode.name = @"textureMask";
     return _faceTextureMaskNode;
+    
 }
 
 

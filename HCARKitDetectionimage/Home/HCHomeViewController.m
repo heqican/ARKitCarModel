@@ -35,6 +35,7 @@
     [self.dataArray addObject:@"ARWorld - faceTracking (人脸贴图)"];
     [self.dataArray addObject:@"ARWorld - faceTracking (表情检测)"];
     [self.dataArray addObject:@"ARWorld - 汽车Demo"];
+    [self.dataArray addObject:@"ARWorld - SCNAction动画"];
 }
 
 
@@ -81,6 +82,9 @@
             [self clickARWorldCarCellWithARMode:ARWorldTrackingConfigurationType_planeDetection_CarDemo sender:nil];
             break;
         }
+        case 5:{
+            [self clickARWorldAnimationActionARModel:ARWorldTrackingConfigurationType_Animation_Action sender:nil];
+        }
             
         default:
             break;
@@ -97,6 +101,9 @@
 }
 - (void)clickARWorldCarCellWithARMode:(ARWorldTrackingConfigurationType)type sender:(id)sender{
     [[HCRouterManager shareInstance] onARWorldCarWithType:type ParamVC:self animated:YES];
+}
+- (void)clickARWorldAnimationActionARModel:(ARWorldTrackingConfigurationType)type sender:(id)sender{
+    [[HCRouterManager shareInstance] onARWorldAnimationActionWithType:type paranVC:self animated:YES];
 }
 
 #pragma mark  - lazy load

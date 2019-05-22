@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		285963B749AB394E2C0066DD /* libPods-HCARKitDetectionimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD29F08FCC090F8E2E22F4D7 /* libPods-HCARKitDetectionimage.a */; };
+		A023AD402294DFDE00AABCC1 /* HCToast_toast_success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A023AD3A2294DFDE00AABCC1 /* HCToast_toast_success@3x.png */; };
+		A023AD412294DFDE00AABCC1 /* HCToast_toast_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A023AD3B2294DFDE00AABCC1 /* HCToast_toast_success@2x.png */; };
+		A023AD422294DFDE00AABCC1 /* HCToast_toast_error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A023AD3C2294DFDE00AABCC1 /* HCToast_toast_error@3x.png */; };
+		A023AD432294DFDE00AABCC1 /* HCToast_toast_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A023AD3D2294DFDE00AABCC1 /* HCToast_toast_error@2x.png */; };
+		A023AD442294DFDE00AABCC1 /* HCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = A023AD3E2294DFDE00AABCC1 /* HCToast.m */; };
+		A023AD482294ED9C00AABCC1 /* HCSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A023AD472294ED9C00AABCC1 /* HCSwitchControl.m */; };
 		A02E15DF226565D5005D4B16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A02E15DE226565D5005D4B16 /* AppDelegate.m */; };
 		A02E15E1226565D5005D4B16 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A02E15E0226565D5005D4B16 /* art.scnassets */; };
 		A02E15E4226565D5005D4B16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02E15E3226565D5005D4B16 /* ViewController.m */; };
@@ -25,21 +31,25 @@
 		A0338BD522685C2F00862B1A /* 0003.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A0338BD422685C2F00862B1A /* 0003.mp4 */; };
 		A0338BD922685CDC00862B1A /* 0003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0338BD822685CDC00862B1A /* 0003.jpg */; };
 		A0338BDB22687BF300862B1A /* faceTexture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0338BDA22687BF300862B1A /* faceTexture.jpg */; };
+		A05D8B40228168EF00CF438E /* HCARAnimationActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05D8B3F228168EF00CF438E /* HCARAnimationActionViewController.m */; };
 		A0BEB4B922695DE8003CDFD9 /* glass.png in Resources */ = {isa = PBXBuildFile; fileRef = A0BEB4B822695DE8003CDFD9 /* glass.png */; };
 		A0DE290F2271F9BC0091D646 /* Const.h in Sources */ = {isa = PBXBuildFile; fileRef = A0DE290E2271F9A80091D646 /* Const.h */; };
 		A0DE2934227301000091D646 /* HCColorPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DE2933227301000091D646 /* HCColorPanelView.m */; };
 		A0DE2937227331F30091D646 /* HCMenuPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DE2936227331F30091D646 /* HCMenuPanelView.m */; };
 		A0DE293B22734E7A0091D646 /* HCMenuPanelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DE293A22734E7A0091D646 /* HCMenuPanelTableViewCell.m */; };
-		A0E0E235227576A500E0D3DB /* HCToast_toast_success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E0E22F227576A400E0D3DB /* HCToast_toast_success@3x.png */; };
-		A0E0E236227576A500E0D3DB /* HCToast_toast_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E0E230227576A400E0D3DB /* HCToast_toast_success@2x.png */; };
-		A0E0E237227576A500E0D3DB /* HCToast_toast_error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E0E231227576A400E0D3DB /* HCToast_toast_error@3x.png */; };
-		A0E0E238227576A500E0D3DB /* HCToast_toast_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0E0E232227576A400E0D3DB /* HCToast_toast_error@2x.png */; };
-		A0E0E239227576A500E0D3DB /* HCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E0E233227576A400E0D3DB /* HCToast.m */; };
 		A0FF5F2C22718F8900ECDEA4 /* HCARCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FF5F2B22718F8900ECDEA4 /* HCARCarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		66CA1CECB3B0530DB9C5B3B7 /* Pods-HCARKitDetectionimage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HCARKitDetectionimage.release.xcconfig"; path = "Pods/Target Support Files/Pods-HCARKitDetectionimage/Pods-HCARKitDetectionimage.release.xcconfig"; sourceTree = "<group>"; };
+		A023AD3A2294DFDE00AABCC1 /* HCToast_toast_success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCToast_toast_success@3x.png"; sourceTree = "<group>"; };
+		A023AD3B2294DFDE00AABCC1 /* HCToast_toast_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCToast_toast_success@2x.png"; sourceTree = "<group>"; };
+		A023AD3C2294DFDE00AABCC1 /* HCToast_toast_error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCToast_toast_error@3x.png"; sourceTree = "<group>"; };
+		A023AD3D2294DFDE00AABCC1 /* HCToast_toast_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCToast_toast_error@2x.png"; sourceTree = "<group>"; };
+		A023AD3E2294DFDE00AABCC1 /* HCToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCToast.m; sourceTree = "<group>"; };
+		A023AD3F2294DFDE00AABCC1 /* HCToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCToast.h; sourceTree = "<group>"; };
+		A023AD462294ED9C00AABCC1 /* HCSwitchControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSwitchControl.h; sourceTree = "<group>"; };
+		A023AD472294ED9C00AABCC1 /* HCSwitchControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSwitchControl.m; sourceTree = "<group>"; };
 		A02E15DA226565D5005D4B16 /* HCARKitDetectionimage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCARKitDetectionimage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02E15DD226565D5005D4B16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A02E15DE226565D5005D4B16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,6 +74,8 @@
 		A0338BD422685C2F00862B1A /* 0003.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0003.mp4; sourceTree = "<group>"; };
 		A0338BD822685CDC00862B1A /* 0003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0003.jpg; sourceTree = "<group>"; };
 		A0338BDA22687BF300862B1A /* faceTexture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = faceTexture.jpg; sourceTree = "<group>"; };
+		A05D8B3E228168EF00CF438E /* HCARAnimationActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCARAnimationActionViewController.h; sourceTree = "<group>"; };
+		A05D8B3F228168EF00CF438E /* HCARAnimationActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCARAnimationActionViewController.m; sourceTree = "<group>"; };
 		A0BEB4B822695DE8003CDFD9 /* glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glass.png; sourceTree = "<group>"; };
 		A0DE290E2271F9A80091D646 /* Const.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = Const.h; sourceTree = "<group>"; };
 		A0DE2932227301000091D646 /* HCColorPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCColorPanelView.h; sourceTree = "<group>"; };
@@ -72,12 +84,6 @@
 		A0DE2936227331F30091D646 /* HCMenuPanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMenuPanelView.m; sourceTree = "<group>"; };
 		A0DE293922734E7A0091D646 /* HCMenuPanelTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMenuPanelTableViewCell.h; sourceTree = "<group>"; };
 		A0DE293A22734E7A0091D646 /* HCMenuPanelTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMenuPanelTableViewCell.m; sourceTree = "<group>"; };
-		A0E0E22F227576A400E0D3DB /* HCToast_toast_success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCToast_toast_success@3x.png"; sourceTree = "<group>"; };
-		A0E0E230227576A400E0D3DB /* HCToast_toast_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCToast_toast_success@2x.png"; sourceTree = "<group>"; };
-		A0E0E231227576A400E0D3DB /* HCToast_toast_error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCToast_toast_error@3x.png"; sourceTree = "<group>"; };
-		A0E0E232227576A400E0D3DB /* HCToast_toast_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HCToast_toast_error@2x.png"; sourceTree = "<group>"; };
-		A0E0E233227576A400E0D3DB /* HCToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCToast.m; sourceTree = "<group>"; };
-		A0E0E234227576A400E0D3DB /* HCToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCToast.h; sourceTree = "<group>"; };
 		A0FF5F2A22718F8900ECDEA4 /* HCARCarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCARCarViewController.h; sourceTree = "<group>"; };
 		A0FF5F2B22718F8900ECDEA4 /* HCARCarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCARCarViewController.m; sourceTree = "<group>"; };
 		AD29F08FCC090F8E2E22F4D7 /* libPods-HCARKitDetectionimage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HCARKitDetectionimage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +117,36 @@
 				66CA1CECB3B0530DB9C5B3B7 /* Pods-HCARKitDetectionimage.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A023AD382294DFDE00AABCC1 /* HCToast */ = {
+			isa = PBXGroup;
+			children = (
+				A023AD392294DFDE00AABCC1 /* Resources */,
+				A023AD3E2294DFDE00AABCC1 /* HCToast.m */,
+				A023AD3F2294DFDE00AABCC1 /* HCToast.h */,
+			);
+			path = HCToast;
+			sourceTree = "<group>";
+		};
+		A023AD392294DFDE00AABCC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A023AD3A2294DFDE00AABCC1 /* HCToast_toast_success@3x.png */,
+				A023AD3B2294DFDE00AABCC1 /* HCToast_toast_success@2x.png */,
+				A023AD3C2294DFDE00AABCC1 /* HCToast_toast_error@3x.png */,
+				A023AD3D2294DFDE00AABCC1 /* HCToast_toast_error@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A023AD452294ED7700AABCC1 /* HCSwitchControl */ = {
+			isa = PBXGroup;
+			children = (
+				A023AD462294ED9C00AABCC1 /* HCSwitchControl.h */,
+				A023AD472294ED9C00AABCC1 /* HCSwitchControl.m */,
+			);
+			path = HCSwitchControl;
 			sourceTree = "<group>";
 		};
 		A02E15D1226565D5005D4B16 = {
@@ -170,6 +206,8 @@
 				A02E160622656C7A005D4B16 /* HCARWorldViewController.m */,
 				A0FF5F2A22718F8900ECDEA4 /* HCARCarViewController.h */,
 				A0FF5F2B22718F8900ECDEA4 /* HCARCarViewController.m */,
+				A05D8B3E228168EF00CF438E /* HCARAnimationActionViewController.h */,
+				A05D8B3F228168EF00CF438E /* HCARAnimationActionViewController.m */,
 			);
 			path = ARWorld;
 			sourceTree = "<group>";
@@ -201,8 +239,8 @@
 		A0DE290B2271F9A80091D646 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A0E0E22D227576A400E0D3DB /* HCToast */,
 				A0DE290E2271F9A80091D646 /* Const.h */,
+				A023AD382294DFDE00AABCC1 /* HCToast */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -210,6 +248,7 @@
 		A0DE29312272FEFB0091D646 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A023AD452294ED7700AABCC1 /* HCSwitchControl */,
 				A0DE293822734E540091D646 /* Cell */,
 				A0DE2932227301000091D646 /* HCColorPanelView.h */,
 				A0DE2933227301000091D646 /* HCColorPanelView.m */,
@@ -226,28 +265,6 @@
 				A0DE293A22734E7A0091D646 /* HCMenuPanelTableViewCell.m */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		A0E0E22D227576A400E0D3DB /* HCToast */ = {
-			isa = PBXGroup;
-			children = (
-				A0E0E22E227576A400E0D3DB /* Resources */,
-				A0E0E233227576A400E0D3DB /* HCToast.m */,
-				A0E0E234227576A400E0D3DB /* HCToast.h */,
-			);
-			name = HCToast;
-			path = "../../../../../Demo/CustomControl/HCToast-master/HCToast/HCToast";
-			sourceTree = "<group>";
-		};
-		A0E0E22E227576A400E0D3DB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A0E0E22F227576A400E0D3DB /* HCToast_toast_success@3x.png */,
-				A0E0E230227576A400E0D3DB /* HCToast_toast_success@2x.png */,
-				A0E0E231227576A400E0D3DB /* HCToast_toast_error@3x.png */,
-				A0E0E232227576A400E0D3DB /* HCToast_toast_error@2x.png */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,16 +326,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E0E238227576A500E0D3DB /* HCToast_toast_error@2x.png in Resources */,
+				A023AD432294DFDE00AABCC1 /* HCToast_toast_error@2x.png in Resources */,
 				A0338BDB22687BF300862B1A /* faceTexture.jpg in Resources */,
-				A0E0E236227576A500E0D3DB /* HCToast_toast_success@2x.png in Resources */,
+				A023AD412294DFDE00AABCC1 /* HCToast_toast_success@2x.png in Resources */,
 				A02E15E1226565D5005D4B16 /* art.scnassets in Resources */,
 				A0338BD122685BF400862B1A /* imageHC01.jpg in Resources */,
 				A0338BD922685CDC00862B1A /* 0003.jpg in Resources */,
 				A02E15EC226565D7005D4B16 /* LaunchScreen.storyboard in Resources */,
 				A0338BD322685C0C00862B1A /* imageHC01.mp4 in Resources */,
-				A0E0E235227576A500E0D3DB /* HCToast_toast_success@3x.png in Resources */,
-				A0E0E237227576A500E0D3DB /* HCToast_toast_error@3x.png in Resources */,
+				A023AD402294DFDE00AABCC1 /* HCToast_toast_success@3x.png in Resources */,
+				A023AD422294DFDE00AABCC1 /* HCToast_toast_error@3x.png in Resources */,
 				A0BEB4B922695DE8003CDFD9 /* glass.png in Resources */,
 				A0338BCF226712D800862B1A /* movie.MP4 in Resources */,
 				A0338BD522685C2F00862B1A /* 0003.mp4 in Resources */,
@@ -383,6 +400,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0DE2937227331F30091D646 /* HCMenuPanelView.m in Sources */,
+				A023AD442294DFDE00AABCC1 /* HCToast.m in Sources */,
+				A05D8B40228168EF00CF438E /* HCARAnimationActionViewController.m in Sources */,
 				A02E15FD22656746005D4B16 /* HCHomeViewController.m in Sources */,
 				A0FF5F2C22718F8900ECDEA4 /* HCARCarViewController.m in Sources */,
 				A02E160722656C7A005D4B16 /* HCARWorldViewController.m in Sources */,
@@ -390,9 +409,9 @@
 				A02E15E4226565D5005D4B16 /* ViewController.m in Sources */,
 				A0DE290F2271F9BC0091D646 /* Const.h in Sources */,
 				A0DE2934227301000091D646 /* HCColorPanelView.m in Sources */,
+				A023AD482294ED9C00AABCC1 /* HCSwitchControl.m in Sources */,
 				A02E160122656963005D4B16 /* HCRouterManager.m in Sources */,
 				A02E15EF226565D7005D4B16 /* main.m in Sources */,
-				A0E0E239227576A500E0D3DB /* HCToast.m in Sources */,
 				A02E15DF226565D5005D4B16 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,16 +556,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = D225N2EYEE;
+				DEVELOPMENT_TEAM = GR8ZW2D2AL;
 				INFOPLIST_FILE = HCARKitDetectionimage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-xxx";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guangsu.carDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = luckycoffee_development;
+				PROVISIONING_PROFILE_SPECIFIER = guangsuWildcardDevelopmentProvisioning;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -556,17 +575,18 @@
 			baseConfigurationReference = 66CA1CECB3B0530DB9C5B3B7 /* Pods-HCARKitDetectionimage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = D225N2EYEE;
+				DEVELOPMENT_TEAM = GR8ZW2D2AL;
 				INFOPLIST_FILE = HCARKitDetectionimage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-xxx";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guangsu.carDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = luckycoffee_development;
+				PROVISIONING_PROFILE_SPECIFIER = carDemoDistributionProvisioning;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
