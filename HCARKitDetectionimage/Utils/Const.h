@@ -42,4 +42,26 @@ blue:((float)(rgbValue & 0xFF))/255.0 \
 alpha:a]
 
 
+
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 1136) : NO)
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 1334) : NO)
+
+#define iPhone6plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 2208) : NO)
+
+#define iPhoneX_Screen ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 2436) : NO)
+
+#define iPhoneXR_Screen ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 1792) : NO)
+
+#define iPhoneXS_Screen ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 2436) : NO)
+
+#define iPhoneXSMAX_Screen ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? ([[UIScreen mainScreen] currentMode].size.height == 2688) : NO)
+
+//iphone X+ 系列
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (([[UIScreen mainScreen] currentMode].size.height == 2436) ||  ([[UIScreen mainScreen] currentMode].size.height == 1624)) ||  ([[UIScreen mainScreen] currentMode].size.height == 2688) || ([[UIScreen mainScreen] currentMode].size.height == 1792)  : NO)
+
+
+
 #endif /* Const_h */

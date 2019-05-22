@@ -10,6 +10,7 @@
 #import "Const.h"
 #import "HCColorPanelView.h"
 #import "HCMenuPanelView.h"
+#import "HCMessagePanelView.h"
 
 static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 
@@ -35,6 +36,8 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 @property (nonatomic, strong) HCMenuPanelView *menuPanelView;
 @property (nonatomic, strong) UIImageView *topNameImageView;
 @property (nonatomic, strong) UIButton *lightButton;//开车灯按钮
+@property (nonatomic, strong) UIButton *showMessageBtn;//点击显示汽车详情按钮
+@property (nonatomic, strong) HCMessagePanelView *messagePanelView;//详情信息按钮
 
 
 @end
@@ -72,6 +75,7 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
     self.menuButton.hidden = YES;
     self.topNameImageView.hidden = YES;
     self.lightButton.hidden = YES;
+    self.showMessageBtn.hidden = YES;
 
     self.tireSpared = NO;
     self.menuPanelView.tireSpared = NO;
@@ -93,6 +97,8 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
     [self.sceneView addSubview:self.menuButton];
     [self.sceneView addSubview:self.topNameImageView];
     [self.sceneView addSubview:self.lightButton];
+    [self.sceneView addSubview:self.showMessageBtn];
+    [self.sceneView addSubview:self.messagePanelView];
     [self.sceneView addSubview:self.menuPanelView];
 }
 
@@ -438,13 +444,23 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
 
 //显示菜单面板
 - (void)showMenuPanelView:(id)sender{
+    [self.messagePanelView hidden];
     [self.menuPanelView show];
 }
 
 //点击车灯按钮
 - (void)clickLightButton:(UIButton *)sender{
     sender.selected = !sender.selected;
+    [self.messagePanelView hidden];
+    [self.menuPanelView hidden];
     
+    
+}
+
+//显示汽车详情
+- (void)showCarMessage:(id)sender{
+    [self.menuPanelView hidden];
+    [self.messagePanelView show];
 }
 
 #pragma mark - 显示汽车模型
@@ -478,6 +494,7 @@ static const CGFloat Car_Model_Scale = 0.01;//汽车模型缩放比例
     self.menuButton.hidden = NO;
     self.topNameImageView.hidden = NO;
     self.lightButton.hidden = NO;
+    self.showMessageBtn.hidden = NO;
 }
 
 //点击检测（碰撞检测）
@@ -655,6 +672,7 @@ CGFloat oldModelScale = Car_Model_Scale;
             bodyNode.childNodes[0].geometry.firstMaterial.diffuse.contents = color;
             
             [weakSelf.menuPanelView hidden];
+            [weakSelf.messagePanelView hidden];
         };
     }
     return _colorPanelView;
@@ -691,6 +709,25 @@ CGFloat oldModelScale = Car_Model_Scale;
         _lightButton.hidden = YES;
     }
     return _lightButton;
+}
+
+- (UIButton *)showMessageBtn{
+    if (!_showMessageBtn) {
+        _showMessageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _showMessageBtn.frame = CGRectMake(70, iphone_height - 70, 60, 60);
+        [_showMessageBtn setImage:[UIImage imageNamed:@"car_show_message_button"] forState:UIControlStateNormal];
+        [_showMessageBtn addTarget:self action:@selector(showCarMessage:) forControlEvents:UIControlEventTouchUpInside];
+        _showMessageBtn.hidden = YES;
+    }
+    return _showMessageBtn;
+}
+
+- (HCMessagePanelView *)messagePanelView{
+    if (!_messagePanelView) {
+        _messagePanelView = [[HCMessagePanelView alloc] initWithFrame:CGRectMake(0, 0, Message_Panel_Size_Width, Message_Panel_Size_Height)];
+        _messagePanelView.center = CGPointMake(iphone_width/2, -Message_Panel_Size_Height/2);
+    }
+    return _messagePanelView;
 }
 
 - (HCMenuPanelView *)menuPanelView{

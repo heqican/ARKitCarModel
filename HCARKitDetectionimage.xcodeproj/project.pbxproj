@@ -14,6 +14,7 @@
 		A023AD432294DFDE00AABCC1 /* HCToast_toast_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A023AD3D2294DFDE00AABCC1 /* HCToast_toast_error@2x.png */; };
 		A023AD442294DFDE00AABCC1 /* HCToast.m in Sources */ = {isa = PBXBuildFile; fileRef = A023AD3E2294DFDE00AABCC1 /* HCToast.m */; };
 		A023AD482294ED9C00AABCC1 /* HCSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A023AD472294ED9C00AABCC1 /* HCSwitchControl.m */; };
+		A023AD4B22952A2000AABCC1 /* HCMessagePanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = A023AD4A22952A2000AABCC1 /* HCMessagePanelView.m */; };
 		A02E15DF226565D5005D4B16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A02E15DE226565D5005D4B16 /* AppDelegate.m */; };
 		A02E15E1226565D5005D4B16 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A02E15E0226565D5005D4B16 /* art.scnassets */; };
 		A02E15E4226565D5005D4B16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02E15E3226565D5005D4B16 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 		A023AD3F2294DFDE00AABCC1 /* HCToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCToast.h; sourceTree = "<group>"; };
 		A023AD462294ED9C00AABCC1 /* HCSwitchControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSwitchControl.h; sourceTree = "<group>"; };
 		A023AD472294ED9C00AABCC1 /* HCSwitchControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSwitchControl.m; sourceTree = "<group>"; };
+		A023AD4922952A2000AABCC1 /* HCMessagePanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMessagePanelView.h; sourceTree = "<group>"; };
+		A023AD4A22952A2000AABCC1 /* HCMessagePanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMessagePanelView.m; sourceTree = "<group>"; };
 		A02E15DA226565D5005D4B16 /* HCARKitDetectionimage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HCARKitDetectionimage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02E15DD226565D5005D4B16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A02E15DE226565D5005D4B16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				A0DE2933227301000091D646 /* HCColorPanelView.m */,
 				A0DE2935227331F30091D646 /* HCMenuPanelView.h */,
 				A0DE2936227331F30091D646 /* HCMenuPanelView.m */,
+				A023AD4922952A2000AABCC1 /* HCMessagePanelView.h */,
+				A023AD4A22952A2000AABCC1 /* HCMessagePanelView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				A02E160122656963005D4B16 /* HCRouterManager.m in Sources */,
 				A02E15EF226565D7005D4B16 /* main.m in Sources */,
 				A02E15DF226565D5005D4B16 /* AppDelegate.m in Sources */,
+				A023AD4B22952A2000AABCC1 /* HCMessagePanelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
